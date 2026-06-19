@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support — 300 Cozy Summer KDP Themes</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sun: #FF6B2B;
+    --sun-light: #FF9A5C;
+    --gold: #F5C842;
+    --teal: #00B4A6;
+    --teal-dark: #007A70;
+    --cream: #FFF8F0;
+    --dark: #1A1008;
+    --mid: #3D2C1E;
+    --muted: #7A6555;
+    --white: #FFFFFF;
+    --green: #22C55E;
+    --red: #EF4444;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+    background: rgba(26,16,8,0.97);
+    backdrop-filter: blur(10px);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2rem; height: 64px;
+    border-bottom: 2px solid var(--sun);
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; font-weight: 900;
+    color: var(--gold); letter-spacing: -0.5px;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 1.5rem; }
+  .nav-links a {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem; color: #bba; text-decoration: none;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a.active { color: var(--teal); }
+  .nav-cta {
+    background: var(--sun); color: var(--white) !important;
+    padding: 0.45rem 1.1rem; border-radius: 4px;
+    font-weight: 700 !important;
+  }
+  .nav-cta:hover { background: var(--sun-light) !important; color: var(--dark) !important; }
+  @media(max-width:700px){
+    .nav-links { display: none; }
+  }
+
+  /* ── PAGE HERO ── */
+  .page-hero {
+    background: var(--dark);
+    padding: 120px 1.5rem 5rem;
+    text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute; inset: 0; pointer-events: none;
+    background:
+      radial-gradient(ellipse 60% 60% at 80% 20%, rgba(0,180,166,0.15) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 50% at 20% 80%, rgba(255,107,43,0.1) 0%, transparent 70%);
+  }
+  .page-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(0,180,166,0.12); border: 1px solid rgba(0,180,166,0.35);
+    color: var(--teal); font-family: 'Space Mono', monospace;
+    font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 0.45rem 1.1rem; border-radius: 100px; margin-bottom: 1.5rem;
+    display: inline-block;
+  }
+  .page-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 900; color: var(--white); line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .page-hero h1 em { color: var(--gold); font-style: italic; }
+  .page-hero p {
+    font-size: 1.1rem; color: #c8b8a8;
+    max-width: 560px; margin: 0 auto; line-height: 1.65;
+  }
+
+  /* ── CONTAINER ── */
+  .container { max-width: 1080px; margin: 0 auto; }
+
+  /* ── SECTION COMMON ── */
+  .section-tag {
+    font-family: 'Space Mono', monospace; font-size: 0.72rem;
+    font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--sun); margin-bottom: 0.9rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.9rem, 4vw, 3rem);
+    font-weight: 900; line-height: 1.15;
+    margin-bottom: 1.2rem;
+  }
+
+  /* ── SUPPORT CARDS ── */
+  #contact { background: #F0F8FF; padding: 6rem 1.5rem; }
+  .support-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .support-card {
+    background: var(--white); border-radius: 14px;
+    padding: 2rem 1.5rem; text-align: center;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    border-top: 3px solid var(--teal);
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .support-card:hover { transform: translateY(-5px); box-shadow: 0 12px 36px rgba(0,0,0,0.11); }
+  .support-card .icon { font-size: 2.4rem; margin-bottom: 1rem; display: block; }
+  .support-card h3 { font-weight: 700; margin-bottom: 0.5rem; font-size: 1rem; }
+  .support-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; margin-bottom: 1rem; }
+  .support-card a {
+    color: var(--teal); font-weight: 600; text-decoration: none;
+    font-size: 0.9rem; word-break: break-all;
+  }
+  .support-card a:hover { color: var(--teal-dark); text-decoration: underline; }
+  .support-card .response-tag {
+    display: inline-block; margin-top: 0.8rem;
+    background: rgba(0,180,166,0.1); border: 1px solid rgba(0,180,166,0.3);
+    color: var(--teal); font-family: 'Space Mono', monospace;
+    font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.3rem 0.7rem; border-radius: 100px;
+  }
+
+  /* ── FAQ ── */
+  #faq { background: #FFF8F0; padding: 6rem 1.5rem; }
+  .faq-list {
+    margin-top: 3rem; display: flex; flex-direction: column;
+    gap: 1rem; max-width: 720px;
+  }
+  .faq-item {
+    background: var(--white); border-radius: 10px;
+    border: 1px solid #e0d8d0; overflow: hidden;
+  }
+  .faq-q {
+    padding: 1.1rem 1.5rem; font-weight: 700; font-size: 0.95rem;
+    cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+    user-select: none;
+  }
+  .faq-q:hover { background: #faf5f0; }
+  .faq-q .arrow { transition: transform 0.3s; font-size: 0.7rem; color: var(--muted); flex-shrink: 0; margin-left: 1rem; }
+  .faq-a {
+    max-height: 0; overflow: hidden; transition: max-height 0.4s ease;
+    padding: 0 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.75;
+  }
+  .faq-item.open .faq-a { max-height: 400px; padding-bottom: 1.2rem; }
+  .faq-item.open .faq-q { color: var(--teal); }
+  .faq-item.open .arrow { transform: rotate(180deg); }
+
+  /* ── GUARANTEE STRIP ── */
+  #guarantee-strip {
+    background: var(--dark);
+    padding: 4rem 1.5rem; text-align: center;
+  }
+  .guar-inner {
+    max-width: 700px; margin: 0 auto;
+    background: rgba(34,197,94,0.07);
+    border: 1.5px solid rgba(34,197,94,0.3);
+    border-radius: 20px; padding: 2.5rem;
+  }
+  .guar-inner .badge { font-size: 3.5rem; margin-bottom: 0.8rem; display: block; }
+  .guar-inner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem; font-weight: 900;
+    color: var(--white); margin-bottom: 0.8rem;
+  }
+  .guar-inner p { font-size: 0.9rem; color: #a09080; line-height: 1.75; }
+  .guar-inner a { color: var(--gold); font-weight: 700; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark); color: #706050;
+    padding: 3rem 1.5rem 2rem; text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+  .footer-links {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .footer-links a {
+    font-family: 'Space Mono', monospace; font-size: 0.68rem;
+    color: #806050; text-decoration: none; letter-spacing: 0.08em;
+    text-transform: uppercase; transition: color 0.2s;
+  }
+  .footer-links a:hover, .footer-links a.active { color: var(--gold); }
+  .footer-copy { font-size: 0.78rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
+  .footer-copy a { color: #806050; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a href="index.html" class="nav-logo">CozyKDP ☀️</a>
+  <div class="nav-links">
+    <a href="index.html">Sales Page</a>
+    <a href="jv.html">JV Partners</a>
+    <a href="support.html" class="active">Support</a>
+    <a href="disclaimer.html">Disclaimer</a>
+    <a href="terms.html">Terms &amp; Conditions</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="index.html#cta" class="nav-cta">Get Access — $17</a>
+  </div>
+</nav>
+
+<!-- ══ PAGE HERO ══ -->
+<div class="page-hero">
+  <div class="page-badge">🛟 Customer Support</div>
+  <h1>We're Here to <em>Help</em></h1>
+  <p>Questions about your order, download, or refund? We typically reply within 24 hours — usually much faster.</p>
+</div>
+
+<!-- ══ CONTACT OPTIONS ══ -->
+<section id="contact">
+  <div class="container">
+    <div class="section-tag">Get In Touch</div>
+    <h2 class="section-title">How Can We Help You?</h2>
+    <p style="color:var(--muted); font-size:1rem; max-width:580px; line-height:1.7">
+      Choose the option below that best fits your situation. For the fastest resolution, email us directly and we'll get back to you within 24 hours.
+    </p>
+
+    <div class="support-grid reveal">
+
+      <div class="support-card">
+        <span class="icon">📧</span>
+        <h3>Email Support</h3>
+        <p>For order issues, download problems, billing questions, or anything else — email us directly.</p>
+        <a href="mailto:ayoubebay1@gmail.com">ayoubebay1@gmail.com</a>
+        <div class="response-tag">⚡ Replies within 24 hrs</div>
+      </div>
+
+      <div class="support-card">
+        <span class="icon">📦</span>
+        <h3>Download Issues</h3>
+        <p>Didn't receive your download link after purchase? Check your spam folder first, then email us with your order ID.</p>
+        <a href="mailto:ayoubebay1@gmail.com?subject=Download%20Issue%20-%20Order%20ID%3A">Email with order ID →</a>
+        <div class="response-tag">⚡ Replies within 24 hrs</div>
+      </div>
+
+      <div class="support-card">
+        <span class="icon">💳</span>
+        <h3>Refund Requests</h3>
+        <p>We offer a full 30-day money-back guarantee, no questions asked. Email us and we'll process your refund promptly.</p>
+        <a href="mailto:ayoubebay1@gmail.com?subject=Refund%20Request%20-%20Order%20ID%3A">Request a refund →</a>
+        <div class="response-tag">✅ 30-day guarantee</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-tag">FAQ</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+
+    <div class="faq-list reveal">
+
+      <div class="faq-item">
+        <div class="faq-q">How do I access my download after purchase? <span class="arrow">▼</span></div>
+        <div class="faq-a">
+          After completing your purchase on WarriorPlus, you'll receive an automated email with a download link. If you don't see it within a few minutes, please check your spam/junk folder. If it's still missing, email us at <a href="mailto:ayoubebay1@gmail.com" style="color:var(--teal)">ayoubebay1@gmail.com</a> with your order ID and we'll sort it out fast.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What file format do I receive? <span class="arrow">▼</span></div>
+        <div class="faq-a">
+          You'll receive a ZIP file containing all 300 AI prompts in PDF and plain-text format, ready to copy and paste directly into your AI image generator. No special software is required beyond a PDF reader.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How do I request a refund? <span class="arrow">▼</span></div>
+        <div class="faq-a">
+          We honour a full 30-day money-back guarantee, no questions asked. Simply email us at <a href="mailto:ayoubebay1@gmail.com?subject=Refund%20Request" style="color:var(--teal)">ayoubebay1@gmail.com</a> with "Refund Request" in the subject line and your WarriorPlus order ID. We'll process your refund within 2 business days.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Which AI tools work with these prompts? <span class="arrow">▼</span></div>
+        <div class="faq-a">
+          The prompts are optimised for Midjourney, DALL·E 3, Adobe Firefly, and Leonardo AI. They also work well with most other major text-to-image generators. Detailed usage tips are included in the download.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can I use the generated images commercially on KDP? <span class="arrow">▼</span></div>
+        <div class="faq-a">
+          Yes. You own the images you generate with these prompts (subject to the terms of the AI tool you use). You can publish them as KDP books under your own name and keep 100% of your royalties. We are not affiliated with Amazon or Amazon KDP.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">I have a question not covered here — what should I do? <span class="arrow">▼</span></div>
+        <div class="faq-a">
+          Just email us at <a href="mailto:ayoubebay1@gmail.com" style="color:var(--teal)">ayoubebay1@gmail.com</a> and we'll be happy to help. We aim to reply to every message within 24 hours (often much sooner).
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ GUARANTEE STRIP ══ -->
+<section id="guarantee-strip">
+  <div class="container">
+    <div class="guar-inner reveal">
+      <span class="badge">🛡️</span>
+      <h2>30-Day Money-Back Guarantee</h2>
+      <p>
+        Try the full pack risk-free for 30 days. If you're not completely satisfied for any reason, 
+        simply email <a href="mailto:ayoubebay1@gmail.com">ayoubebay1@gmail.com</a> within 30 days of purchase 
+        and we'll refund every cent — no questions, no hassle, no hard feelings. Your satisfaction is our priority.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Sales Page</a>
+    <a href="jv.html">JV Partners</a>
+    <a href="support.html" class="active">Support</a>
+    <a href="disclaimer.html">Disclaimer</a>
+    <a href="terms.html">Terms &amp; Conditions</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+  <p class="footer-copy">
+    &copy; 2024 CozyKDP &middot; 300 Cozy Summer Themes &middot; All Rights Reserved<br>
+    This website is not affiliated with, associated with, authorized by, endorsed by, or in any way officially connected with Amazon or Amazon KDP.
+    &ldquo;Amazon KDP&rdquo; is a trademark of Amazon.com, Inc. All results mentioned are not typical. Individual results will vary.
+    This product is sold via WarriorPlus. By purchasing, you agree to our <a href="terms.html">Terms &amp; Conditions</a> and <a href="privacy.html">Privacy Policy</a>.
+  </p>
+</footer>
+
+<script>
+/* ── FAQ accordion ── */
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+/* ── Scroll reveals ── */
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+  });
+}, { threshold: 0.1 });
+reveals.forEach(r => observer.observe(r));
+</script>
+</body>
+</html>

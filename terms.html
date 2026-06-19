@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms & Conditions — 300 Cozy Summer KDP Themes</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sun: #FF6B2B;
+    --sun-light: #FF9A5C;
+    --gold: #F5C842;
+    --teal: #00B4A6;
+    --teal-dark: #007A70;
+    --cream: #FFF8F0;
+    --dark: #1A1008;
+    --mid: #3D2C1E;
+    --muted: #7A6555;
+    --white: #FFFFFF;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+    background: rgba(26,16,8,0.97);
+    backdrop-filter: blur(10px);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2rem; height: 64px;
+    border-bottom: 2px solid var(--sun);
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; font-weight: 900;
+    color: var(--gold); letter-spacing: -0.5px;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 1.5rem; }
+  .nav-links a {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem; color: #bba; text-decoration: none;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a.active { color: var(--teal); }
+  .nav-cta {
+    background: var(--sun); color: var(--white) !important;
+    padding: 0.45rem 1.1rem; border-radius: 4px;
+    font-weight: 700 !important;
+  }
+  .nav-cta:hover { background: var(--sun-light) !important; color: var(--dark) !important; }
+  @media(max-width:700px){ .nav-links { display: none; } }
+
+  /* ── PAGE HERO ── */
+  .page-hero {
+    background: var(--dark);
+    padding: 120px 1.5rem 5rem;
+    text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute; inset: 0; pointer-events: none;
+    background:
+      radial-gradient(ellipse 60% 60% at 80% 20%, rgba(245,200,66,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 50% at 20% 80%, rgba(255,107,43,0.08) 0%, transparent 70%);
+  }
+  .page-badge {
+    background: rgba(245,200,66,0.1); border: 1px solid rgba(245,200,66,0.3);
+    color: var(--gold); font-family: 'Space Mono', monospace;
+    font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 0.45rem 1.1rem; border-radius: 100px; margin-bottom: 1.5rem;
+    display: inline-block;
+  }
+  .page-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 900; color: var(--white); line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .page-hero h1 em { color: var(--gold); font-style: italic; }
+  .page-hero p {
+    font-size: 1rem; color: #c8b8a8;
+    max-width: 520px; margin: 0 auto; line-height: 1.65;
+  }
+  .last-updated {
+    display: inline-block; margin-top: 1.5rem;
+    font-family: 'Space Mono', monospace; font-size: 0.68rem;
+    color: #7a6a5a; letter-spacing: 0.08em; text-transform: uppercase;
+  }
+
+  /* ── CONTENT ── */
+  .policy-wrap {
+    max-width: 760px; margin: 0 auto;
+    padding: 5rem 1.5rem 6rem;
+  }
+
+  /* Table of contents */
+  .toc {
+    background: var(--white); border-radius: 14px;
+    border: 1px solid #e0d8d0; border-left: 4px solid var(--gold);
+    padding: 1.8rem 2rem; margin-bottom: 3.5rem;
+  }
+  .toc h3 {
+    font-family: 'Space Mono', monospace; font-size: 0.72rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--sun); margin-bottom: 1rem;
+  }
+  .toc ol { padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.45rem; }
+  .toc li { font-size: 0.9rem; }
+  .toc a { color: var(--mid); text-decoration: none; transition: color 0.2s; }
+  .toc a:hover { color: var(--sun); }
+
+  /* Sections */
+  .policy-section { margin-bottom: 3rem; }
+  .policy-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.45rem; font-weight: 900;
+    color: var(--dark); margin-bottom: 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid #f0e8e0;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .policy-section h2 .num {
+    font-family: 'Space Mono', monospace; font-size: 0.7rem;
+    background: var(--sun); color: var(--white);
+    padding: 0.2rem 0.55rem; border-radius: 4px;
+    font-weight: 700; letter-spacing: 0.05em; flex-shrink: 0;
+  }
+  .policy-section p {
+    font-size: 0.95rem; line-height: 1.85; color: #4a3828;
+    margin-bottom: 1rem;
+  }
+  .policy-section ul {
+    padding-left: 1.3rem; margin-bottom: 1rem;
+    display: flex; flex-direction: column; gap: 0.5rem;
+  }
+  .policy-section ul li {
+    font-size: 0.93rem; line-height: 1.75; color: #4a3828;
+  }
+  .policy-section ul li::marker { color: var(--sun); }
+  .policy-section a { color: var(--teal); font-weight: 600; }
+  .policy-section a:hover { color: var(--teal-dark); }
+
+  /* Warning / highlight boxes */
+  .highlight-box {
+    background: rgba(255,107,43,0.06);
+    border: 1px solid rgba(255,107,43,0.22);
+    border-radius: 10px; padding: 1.2rem 1.5rem;
+    margin: 1.2rem 0; font-size: 0.9rem;
+    color: #3a2818; line-height: 1.8;
+  }
+  .highlight-box strong { color: var(--sun); }
+
+  .info-box {
+    background: rgba(0,180,166,0.06);
+    border: 1px solid rgba(0,180,166,0.22);
+    border-radius: 10px; padding: 1.2rem 1.5rem;
+    margin: 1.2rem 0; font-size: 0.9rem;
+    color: #3a2818; line-height: 1.8;
+  }
+  .info-box strong { color: var(--teal-dark); }
+
+  /* Contact card */
+  .contact-card {
+    background: var(--dark); border-radius: 16px;
+    padding: 2.2rem 2rem; text-align: center; margin-top: 3rem;
+  }
+  .contact-card p { color: #a09080; font-size: 0.9rem; line-height: 1.8; margin-bottom: 0.8rem; }
+  .contact-card a {
+    color: var(--gold); font-weight: 700; font-size: 1rem;
+    text-decoration: none;
+  }
+  .contact-card a:hover { color: var(--sun-light); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark); color: #706050;
+    padding: 3rem 1.5rem 2rem; text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+  .footer-links {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .footer-links a {
+    font-family: 'Space Mono', monospace; font-size: 0.68rem;
+    color: #806050; text-decoration: none; letter-spacing: 0.08em;
+    text-transform: uppercase; transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-links a.active { color: var(--gold); }
+  .footer-copy { font-size: 0.78rem; line-height: 1.8; max-width: 640px; margin: 0 auto; }
+  .footer-copy a { color: #806050; }
+
+  /* Reveal */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a href="index.html" class="nav-logo">CozyKDP ☀️</a>
+  <div class="nav-links">
+    <a href="index.html">Sales Page</a>
+    <a href="jv.html">JV Partners</a>
+    <a href="support.html">Support</a>
+    <a href="disclaimer.html">Disclaimer</a>
+    <a href="terms.html" class="active">Terms &amp; Conditions</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="index.html#cta" class="nav-cta">Get Access — $17</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<div class="page-hero">
+  <div class="page-badge">📄 Legal</div>
+  <h1>Terms &amp; <em>Conditions</em></h1>
+  <p>Please read these terms carefully before purchasing or using our products. By completing a purchase you agree to be bound by them.</p>
+  <span class="last-updated">Last updated: January 1, 2024</span>
+</div>
+
+<!-- ══ CONTENT ══ -->
+<div class="policy-wrap">
+
+  <!-- TOC -->
+  <div class="toc reveal">
+    <h3>📋 Table of Contents</h3>
+    <ol>
+      <li><a href="#acceptance">Acceptance of Terms</a></li>
+      <li><a href="#product">Product Description</a></li>
+      <li><a href="#license">License &amp; Permitted Use</a></li>
+      <li><a href="#restrictions">Restrictions</a></li>
+      <li><a href="#refunds">Refund Policy</a></li>
+      <li><a href="#earnings">Earnings Disclaimer</a></li>
+      <li><a href="#ip">Intellectual Property</a></li>
+      <li><a href="#liability">Limitation of Liability</a></li>
+      <li><a href="#third-party">Third-Party Platforms</a></li>
+      <li><a href="#governing">Governing Law</a></li>
+      <li><a href="#changes">Changes to These Terms</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </div>
+
+  <!-- 1 -->
+  <div class="policy-section reveal" id="acceptance">
+    <h2><span class="num">01</span> Acceptance of Terms</h2>
+    <p>By accessing this website or purchasing "300 Cozy Summer KDP Themes" (the "Product"), you confirm that you have read, understood, and agree to be bound by these Terms & Conditions ("Terms") and our <a href="privacy.html">Privacy Policy</a>.</p>
+    <p>If you do not agree to these Terms, please do not purchase or use our Product. We reserve the right to refuse service to anyone for any reason at any time.</p>
+    <div class="info-box">
+      <strong>Note:</strong> These Terms constitute a legally binding agreement between you ("the Customer") and CozyKDP ("we", "us", or "our").
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="policy-section reveal" id="product">
+    <h2><span class="num">02</span> Product Description</h2>
+    <p>The Product consists of a digital download containing 300 AI image prompts designed for use with AI image generation tools (such as Midjourney, DALL·E 3, Adobe Firefly, and Leonardo AI) to create cozy summer-themed images suitable for Amazon KDP (Kindle Direct Publishing) book covers and interiors.</p>
+    <p>The Product is delivered electronically as a ZIP file containing PDF and plain-text files. No physical product will be shipped.</p>
+    <div class="highlight-box">
+      <strong>Digital product notice:</strong> Due to the instant-access nature of digital downloads, please review our Refund Policy in Section 5 before purchasing.
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="policy-section reveal" id="license">
+    <h2><span class="num">03</span> License &amp; Permitted Use</h2>
+    <p>Upon successful purchase, you are granted a <strong>personal, non-exclusive, non-transferable licence</strong> to use the Product for the following purposes:</p>
+    <ul>
+      <li>Generate AI images using the provided prompts with compatible AI tools.</li>
+      <li>Use the AI-generated images in your own KDP books and publications.</li>
+      <li>Sell books containing the AI-generated images on Amazon KDP or other publishing platforms under your own author name.</li>
+      <li>Use the generated images for personal creative projects.</li>
+    </ul>
+    <div class="info-box">
+      <strong>You own the images you generate.</strong> The prompts are tools — the creative output belongs to you, subject to the terms of whichever AI platform you use to generate the images.
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="policy-section reveal" id="restrictions">
+    <h2><span class="num">04</span> Restrictions</h2>
+    <p>You may <strong>not</strong> do any of the following with the Product:</p>
+    <ul>
+      <li>Resell, redistribute, share, gift, or transfer the prompt files themselves (the .pdf or .txt files) to any third party.</li>
+      <li>Bundle the prompt files with other products for sale or giveaway.</li>
+      <li>Claim authorship or ownership of the original prompt files.</li>
+      <li>Use the Product to create content that is illegal, defamatory, obscene, or infringes upon the intellectual property rights of others.</li>
+      <li>Upload or share the Product files to any file-sharing platform, cloud storage (public), or membership site without our written consent.</li>
+    </ul>
+    <div class="highlight-box">
+      <strong>One licence per purchase.</strong> Each purchase is for a single user only. If you wish to use the Product across a team or organisation, please contact us to discuss multi-user licencing.
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="policy-section reveal" id="refunds">
+    <h2><span class="num">05</span> Refund Policy</h2>
+    <p>We stand behind our Product and offer a <strong>30-day money-back guarantee</strong>. If you are not satisfied with your purchase for any reason, simply contact us within 30 days of your purchase date and we will issue a full refund — no questions asked.</p>
+    <p>To request a refund:</p>
+    <ul>
+      <li>Email <a href="mailto:ayoubebay1@gmail.com?subject=Refund%20Request">ayoubebay1@gmail.com</a> with the subject line "Refund Request".</li>
+      <li>Include your full name and WarriorPlus order ID.</li>
+      <li>We will process your refund within 2 business days of receiving your request.</li>
+    </ul>
+    <div class="info-box">
+      <strong>After 30 days,</strong> refunds are issued at our sole discretion. Refund requests submitted after the 30-day window will be considered on a case-by-case basis.
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="policy-section reveal" id="earnings">
+    <h2><span class="num">06</span> Earnings Disclaimer</h2>
+    <p>Any income figures or results mentioned on this website are illustrative examples only and are not guarantees of earnings. Individual results will vary significantly based on factors including but not limited to:</p>
+    <ul>
+      <li>Your level of effort, skill, and experience with Amazon KDP and AI tools.</li>
+      <li>Market conditions and competition on the Amazon platform.</li>
+      <li>The quality of the books you produce and publish.</li>
+      <li>Time invested in marketing and promotion.</li>
+    </ul>
+    <p>We make no representation that you will earn any specific amount of money by using this Product. The Product is an educational and creative resource — your results depend entirely on your own actions.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="policy-section reveal" id="ip">
+    <h2><span class="num">07</span> Intellectual Property</h2>
+    <p>All content on this website — including text, graphics, design, and the prompt files themselves — is the intellectual property of CozyKDP and is protected by applicable copyright and intellectual property laws.</p>
+    <p>The AI-generated images you create using these prompts are yours. However, please note that ownership and copyright of AI-generated content may vary by jurisdiction and by the terms of the AI platform used. It is your responsibility to understand the terms of the AI tool you use.</p>
+    <p>We are not affiliated with, endorsed by, or in any way connected to Amazon, Amazon KDP, Midjourney, OpenAI, Adobe, or any other third-party platform mentioned on this website.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="policy-section reveal" id="liability">
+    <h2><span class="num">08</span> Limitation of Liability</h2>
+    <p>To the fullest extent permitted by applicable law, CozyKDP and its owner(s) shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:</p>
+    <ul>
+      <li>Loss of profits or revenue.</li>
+      <li>Loss of data or business interruption.</li>
+      <li>Any damages arising from your use of, or inability to use, the Product.</li>
+      <li>Any errors or inaccuracies in the content of this website.</li>
+    </ul>
+    <p>Our total liability to you for any claim arising out of or relating to these Terms or the Product shall not exceed the amount you paid for the Product.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="policy-section reveal" id="third-party">
+    <h2><span class="num">09</span> Third-Party Platforms</h2>
+    <p>This Product is sold through WarriorPlus. By purchasing, you also agree to WarriorPlus's terms of service and privacy policy. We have no control over WarriorPlus's policies or practices.</p>
+    <p>The AI tools referenced (Midjourney, DALL·E 3, Adobe Firefly, Leonardo AI, etc.) are independent third-party platforms. Your use of these tools is governed by their own terms of service. We are not responsible for any changes to these platforms' pricing, availability, or terms.</p>
+    <p>Amazon KDP is an independent platform. Publishing on KDP is subject to Amazon's content guidelines and terms of service, which are entirely separate from these Terms.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="policy-section reveal" id="governing">
+    <h2><span class="num">10</span> Governing Law</h2>
+    <p>These Terms shall be governed by and construed in accordance with applicable law. Any disputes arising from these Terms or your use of the Product shall be resolved through good-faith negotiation in the first instance. If a resolution cannot be reached, disputes may be referred to the appropriate legal jurisdiction.</p>
+    <p>If any provision of these Terms is found to be unenforceable, the remaining provisions will continue in full force and effect.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="policy-section reveal" id="changes">
+    <h2><span class="num">11</span> Changes to These Terms</h2>
+    <p>We reserve the right to modify these Terms at any time. When we do, we will update the "Last updated" date at the top of this page. Changes take effect immediately upon posting.</p>
+    <p>Your continued use of the website or Product after any changes constitutes your acceptance of the revised Terms. We encourage you to review these Terms periodically.</p>
+  </div>
+
+  <!-- 12 -->
+  <div class="policy-section reveal" id="contact">
+    <h2><span class="num">12</span> Contact</h2>
+    <p>If you have any questions about these Terms & Conditions, please contact us:</p>
+  </div>
+
+  <div class="contact-card reveal">
+    <p>📧 Legal &amp; Terms Enquiries</p>
+    <a href="mailto:ayoubebay1@gmail.com">ayoubebay1@gmail.com</a>
+    <p style="margin-top:0.8rem; font-size:0.82rem;">We aim to respond to all enquiries within 2 business days.</p>
+  </div>
+
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Sales Page</a>
+    <a href="jv.html">JV Partners</a>
+    <a href="support.html">Support</a>
+    <a href="disclaimer.html">Disclaimer</a>
+    <a href="terms.html" class="active">Terms &amp; Conditions</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+  <p class="footer-copy">
+    &copy; 2024 CozyKDP &middot; 300 Cozy Summer Themes &middot; All Rights Reserved<br>
+    This website is not affiliated with, associated with, authorized by, endorsed by, or in any way officially connected with Amazon or Amazon KDP.
+    &ldquo;Amazon KDP&rdquo; is a trademark of Amazon.com, Inc. All results mentioned are not typical. Individual results will vary.
+  </p>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+  });
+}, { threshold: 0.08 });
+reveals.forEach(r => observer.observe(r));
+</script>
+</body>
+</html>
